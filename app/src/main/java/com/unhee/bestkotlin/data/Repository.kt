@@ -1,4 +1,4 @@
-package com.unhee.bestkotlin.entity
+package com.unhee.bestkotlin.data
 
 import androidx.room.Entity
 import com.google.gson.annotations.Expose
