@@ -1,4 +1,4 @@
-package com.unhee.bestkotlin.data
+package com.unhee.bestkotlin.data.entity
 
 import com.google.gson.annotations.Expose
 
