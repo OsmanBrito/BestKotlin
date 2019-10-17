@@ -5,7 +5,7 @@ import android.os.AsyncTask
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.LiveData
-import com.unhee.bestkotlin.RepositoryActivity
+import com.unhee.bestkotlin.ui.view.RepositoryActivity
 import com.unhee.bestkotlin.api.RetrofitInitializer
 import com.unhee.bestkotlin.data.ProjectDataBase
 import com.unhee.bestkotlin.data.dao.RepositoryDAO

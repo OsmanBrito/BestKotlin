@@ -1,4 +1,4 @@
-package com.unhee.bestkotlin.adapters
+package com.unhee.bestkotlin.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.unhee.bestkotlin
+package com.unhee.bestkotlin.ui.view
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.SimpleItemAnimator
-import com.unhee.bestkotlin.adapters.RepositoryAdapter
+import com.unhee.bestkotlin.ui.adapter.RepositoryAdapter
 import com.unhee.bestkotlin.data.entity.Repository
 import com.unhee.bestkotlin.viewmodel.RepositoriesViewModel
 import kotlinx.android.synthetic.main.activity_repo_list.*
@@ -16,10 +16,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import android.os.Parcelable
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import com.unhee.bestkotlin.R
 
 
 class RepositoryActivity : AppCompatActivity() {
@@ -37,7 +34,7 @@ class RepositoryActivity : AppCompatActivity() {
         mViewModel = RepositoriesViewModel(application)
         val adapter = RepositoryAdapter(this)
         recyclerView.adapter = adapter
-        RepositoryActivity.progressBar = progressBar
+        Companion.progressBar = progressBar
         mViewModel.repositories.observe(this, Observer { repositories ->
             semaphore = 0
             progressBar.visibility = View.GONE
