@@ -25,7 +25,7 @@ class RepoRepository constructor(private val application: Application) {
     }
 
     suspend fun getRepositories(nextPage: Boolean): LiveData<List<Repository>> {
-        if (dao.repositories.value.isNullOrEmpty() || nextPage) {
+        if (dao.getAll().isNullOrEmpty() || nextPage) {
             refreshRepositories()
         }
         return dao.repositories
